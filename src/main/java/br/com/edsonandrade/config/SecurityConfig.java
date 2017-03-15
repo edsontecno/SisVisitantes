@@ -35,10 +35,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests().antMatchers("/sanMatheo/usuario/**").hasRole("CADASTRAR_USUARIO").anyRequest()
-				.authenticated().and().formLogin().loginPage("/sanMatheo/login").permitAll()
+		http.authorizeRequests().antMatchers("/sisVisitantes/usuario/**").hasRole("CADASTRAR_USUARIO").anyRequest()
+				.authenticated().and().formLogin().loginPage("/sisVisitantes/login").permitAll()
 
-				.and().exceptionHandling().accessDeniedPage("/sanMatheo/403").and().csrf().disable();
+				.and().exceptionHandling().accessDeniedPage("/sisVisitantes/403").and().csrf().disable();
 	}
 
 	@Bean

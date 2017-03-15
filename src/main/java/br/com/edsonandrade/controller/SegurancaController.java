@@ -12,7 +12,7 @@ public class SegurancaController extends DefaultController {
 	public String login(@AuthenticationPrincipal User user) {
 
 		if (user != null) {
-			return "redirect:/sanMatheo/home";
+			return "redirect:/sisVisitantes/home";
 		}
 
 		return "Login";
@@ -21,7 +21,7 @@ public class SegurancaController extends DefaultController {
 	@GetMapping("/loginFacebook")
 	public String loginFacebook() {
 
-		return "redirect:/sanMatheo/login";
+		return "redirect:/sisVisitantes/login";
 	}
 
 	@GetMapping("/403")
